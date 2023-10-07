@@ -18,9 +18,6 @@ jobs:
 
       - name: Qualidade do código
         run: npm run lint:dev
-
-      - name: Iniciar servidor de desenvolvimento
-        run: npm run dev
         
       - name: Verificar conflitos de merging
         run: git merge-base --is-ancestor HEAD ${{ github.event.pull_request.head.sha }}
