@@ -1,5 +1,9 @@
 function App() {
 
+  const verificar = (a: number, b: number) => {
+    return a > b;
+  }
+
   return (
     <>
       <div>Bem vindo!</div>
