@@ -1,0 +1,27 @@
+name: Pull Request to develop
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v2
+
+      - name: Configurar ambiente
+        run: npm install
+
+      - name: Qualidade do código
+        run: npm run lint:prod
+
+      - name: Iniciar servidor de desenvolvimento
+        run: npm run build
+        
+      - name: Verificar conflitos de merging
+        run: git merge-base --is-ancestor HEAD ${{ github.event.pull_request.head.sha }}
+        continue-on-error: true
