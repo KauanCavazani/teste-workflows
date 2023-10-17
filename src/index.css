@@ -5,8 +5,16 @@
   padding: 0;
 }
 
-p {
+p { 
   color: black;
   margin-left: 3rem;
   margin-right: 2em;
+  /* teste */
 }
+
+
+git commit -m "Refactor usability tests.
+>
+>
+Co-authored-by:  Kauan Cavazani <Kauan.cavazani@gmail.com>
+"
